@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    	{% for estudiante in persona_list %}
+    	    <h2> {{ estudiante.nombre }} <b>{{ estudiante.apellido }}</b> </h2>
+    	    <p> {{ estudiante.nacimiento }} </p>
+            {% if estudiante.edad %}
+             <p> {{ estudiante.edad}} </p>
+             {% endif %} 
+           <div>
+            {% if estudiante.foto %}
+                <img src="{{ estudiante.foto.url }}" alt="{{ estudiante.nombre }} {{estudiante.apellido}}">
+                {% endif %} 
+            </div>
+        {% endfor %}
+    </body>
+</html> 
